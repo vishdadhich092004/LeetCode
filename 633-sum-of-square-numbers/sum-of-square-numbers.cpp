@@ -1,7 +1,6 @@
 class Solution {
 public:
     bool judgeSquareSum(int c) {
-        bool ans = false;
         unordered_set<long long>st;
         for(int i=0;i<=sqrt(c);i++)
         st.insert(i*i);
@@ -10,13 +9,10 @@ public:
         {
             int other_num = c - it;
             if(st.find(other_num)!=st.end())
-            {
-                ans = true;
-                break;
-            }
+                return true;
         }
 
-        return ans;
+        return false;
 
     }
 };
