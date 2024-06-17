@@ -1,8 +1,7 @@
 class Solution {
 public:
     bool isPerfectSquare(int num) {
-        double root = sqrt(num);
-        if(round(root)!=root)
+        if(round(sqrt(num))!=sqrt(num))
         return false;
         return true;
     }
